@@ -61,12 +61,12 @@ npm install
 
 3. Configure the API endpoint:
 
-Open `src/app/page.tsx` and update the API base URL:
-```typescript
-const API_BASE_URL = 'http://localhost:8000/api'; // For local development
-// or
-const API_BASE_URL = 'https://your-backend-url.com/api'; // For production
+Create a `.env.local` file in the root directory:
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000/api
 ```
+
+For production, set the environment variable in your hosting platform (e.g., Vercel).
 
 4. Run the development server:
 ```bash

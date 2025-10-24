@@ -5,8 +5,8 @@ import axios from 'axios';
 import { LandingPageRenderer } from '@/components/landing-page-renderer';
 import { SectionEditModal } from '@/components/section-edit-modal';
 
-// const API_BASE_URL = 'http://localhost:8000/api';
-const API_BASE_URL = 'http://localhost:8000/api';
+// Use environment variable for API URL, fallback to localhost for development
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
